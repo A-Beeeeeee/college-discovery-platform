@@ -1,0 +1,13 @@
+import { Suspense } from "react";
+import { LoginForm } from "@/features/auth/components/login-form";
+import { Skeleton } from "@/components/ui/skeleton";
+
+export const metadata = { title: "Sign In" };
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<Skeleton className="h-80 w-full" />}>
+      <LoginForm />
+    </Suspense>
+  );
+}
